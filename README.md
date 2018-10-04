@@ -1,6 +1,13 @@
 # The Unix Workbench
 
-## Week 1 Unix and Command Line Basics
+Progress
+
+- [x] Week 1
+- [ ] Week 2
+- [ ] Week 3
+- [ ] Week 4 
+
+## Week 1: Unix and Command Line Basics
 
 **Learning Objectives**
 
@@ -48,3 +55,36 @@ Turn on terminal
 - `cp -r [dir] [dir_new]`: copy files/directories
 - `rm [file_name]`: remove file(**You should try to avoid using rm which permanently removes files or folders**)
 - `rm -r [dir]`: remove directory(**You should try to avoid using rm which permanently removes files or folders**)
+
+## Week2: Working with Unix
+
+**Learning Objectives**
+
+1. Solve problems by consulting documentation
+2. Use wildcards on the command line to work with multiple files and folders
+3. Use grep, egrep, metacharacters, regular expressions, and find to search in file and directories
+4. Customize Bash
+5. Examine differences among files
+6. Use pipes to deploy the output of one command as the input of another command
+
+### Self-Help
+
+- `man [command]`: look up the documentation for a command
+- `apropos [keyword]`: if you can't think of the name of a command, you can use this command to search for a word associated with that command (press `n` to search for next occurrence of the word, `shift+n` to go to previous one)
+
+### Get Wild
+
+- `*`: represents zero or more of any character, ex: `ls 2017*`: list the files that start with 2017 followed by zero or more of any character
+
+### Search
+
+- `grep [regular_expression] [file_name]`: search through text files
+- `egrep [regulare_expression] [file_name]`: apply metacharacters to search(To take full advantage of all of the metacharacters). Below are some common metacharacters usage:
+    - `.`: represents any character, ex: `egrep "i.g" states.txt`
+    - `+`: represents one or more occurrences of the preceeding expression, ex: `egrep "s+as" states.txt`
+    - `*`: represents zero or more occurrences of the preceeding expression, ex: `egrep "s*as" states.txt`
+    - `char{number}`: exactly `number` occurrences of the character `char`, ex: `egrep "s{2}" states.txt`
+    - `char{number1,number2}`: between `number1` and `number2` of occurrences of `char`, ex: `egrep "s{2,3}" states.txt`
+    - `(chars){number}`: exactly `number` occurences of the `chars`, ex: `egrep "(iss){2}" states.txt`
+
+
